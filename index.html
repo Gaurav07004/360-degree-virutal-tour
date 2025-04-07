@@ -47,28 +47,5 @@
         position="0 1.6 0"
       ></a-entity>
     </a-scene>
-
-    <!-- Custom VR Button -->
-    <button id="enterVR">Enter VR</button>
-
-    <script>
-      const scene = document.getElementById("scene");
-      const vrBtn = document.getElementById("enterVR");
-
-      vrBtn.addEventListener("click", () => {
-        if (scene && scene.enterVR) {
-          scene.enterVR();
-        }
-      });
-
-      // Hide the button when in VR mode
-      scene.addEventListener("enter-vr", () => {
-        vrBtn.style.display = "none";
-      });
-
-      scene.addEventListener("exit-vr", () => {
-        vrBtn.style.display = "block";
-      });
-    </script>
   </body>
 </html>
